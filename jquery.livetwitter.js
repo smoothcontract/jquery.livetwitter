@@ -82,9 +82,9 @@
 
           // Convert the time stamp to a more human readable format
           relativeTime: function (timeString) {
-            var parsedDate = Date.parse(timeString);
-            var delta = (Date.parse(Date()) - parsedDate) / 1000;
-            var r = '';
+            var parsedDate = Date.parse(timeString),
+								delta = (new Date() - parsedDate) / 1000,
+								r = '';
             if  (delta < 60) {
               r = delta + ' seconds ago';
             } else if (delta < 120) {
